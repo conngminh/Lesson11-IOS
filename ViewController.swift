@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
     
     override func viewDidLoad() {
@@ -27,6 +29,11 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "Agree", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func tapOnLabel(_ sender: Any) {
+        lbTitle.text = "Screen 1: Tap gesture" 
     }
 }
 

@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab Gesture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQX-HH-uaM">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab Gesture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQX-HH-uaM">
                                 <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4Gp-AD-FNU" appends="YES" id="vLM-0f-vlr"/>
+                                </connections>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barca" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-R9-CR4">
                                 <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="AVc-e9-ssr"/>
                                     <constraint firstAttribute="height" constant="240" id="f3Y-1o-dax"/>
@@ -42,9 +47,15 @@
                     </view>
                     <connections>
                         <outlet property="imgLogo" destination="YyF-R9-CR4" id="yJo-an-7Q0"/>
+                        <outlet property="lbTitle" destination="sQX-HH-uaM" id="h1M-Pt-JtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Gp-AD-FNU">
+                    <connections>
+                        <action selector="tapOnLabel:" destination="BYZ-38-t0r" id="e9R-hj-rm2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="68" y="46"/>
         </scene>
