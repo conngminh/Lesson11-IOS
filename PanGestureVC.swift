@@ -11,6 +11,7 @@ class PanGestureVC: UIViewController {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
     
+    @IBOutlet weak var imgBall: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPanGesture()
@@ -35,4 +36,14 @@ class PanGestureVC: UIViewController {
         }
     }
     
+    @IBAction func panOnBall(_ sender: UIPanGestureRecognizer) {
+        let trans = sender.translation(in: view)
+        if let view = sender.view { // lấy view
+            let x = view.center.x + trans.x
+            let y = view.center.y + trans.y
+            view.center = CGPoint(x: x, y: y)
+            sender.setTranslation(CGPoint.zero, in: view)
+        }
+
+    }
 }
