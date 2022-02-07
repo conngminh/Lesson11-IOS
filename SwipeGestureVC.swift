@@ -83,9 +83,12 @@ class SwipeGestureVC: UIViewController {
 //        lbTile.text = "You just swipe from left -> right"
 //    }
     
-    
     @IBAction func swipeOnView(_ sender: Any) {
         lbTile.text = "Swipe right on View"
+        let vc = LongPressGesture(nibName: "LongPressGesture", bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
 
