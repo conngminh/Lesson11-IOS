@@ -35,5 +35,9 @@ class LongPressGesture: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func longPressOnLabel(_ sender: Any) {
+        lbTitle.text = "You have long pressed on title"
+    }
+    
 }
 
