@@ -17,13 +17,42 @@ class SwipeGestureVC: UIViewController {
     }
     
     func setupSwipeGesture() {
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
         imgLogo.isUserInteractionEnabled = true
-        swipe.direction = .left
-        imgLogo.addGestureRecognizer(swipe)
+        swipeLeft.direction = .left
+        imgLogo.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
+        swipeRight.direction = .right
+        imgLogo.addGestureRecognizer(swipeRight)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
+        swipeUp.direction = .up
+        imgLogo.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
+        swipeDown.direction = .down
+        imgLogo.addGestureRecognizer(swipeDown)
+        
     }
     
-    @objc func swipeLogo() {
-        lbTile.text = "You just swipe from right -> left" 
+    @objc func swipeLogo(swipe: UISwipeGestureRecognizer) {
+        if swipe.direction == UISwipeGestureRecognizer.Direction.left {
+            lbTile.text = "You just swipe from left -> right"
+        } else if swipe.direction == UISwipeGestureRecognizer.Direction.right {
+            lbTile.text = "You just swipe from right -> left"
+        } else if swipe.direction == UISwipeGestureRecognizer.Direction.up {
+            lbTile.text = "You just swipe from down -> up"
+        } else {
+            lbTile.text = "You just swipe from up -> down"
+        }
     }
+//    @objc func swipeLeftLogo() {
+//        lbTile.text = "You just swipe from right -> left"
+//    }
+//
+//    @objc func swipeRightLogo() {
+//        lbTile.text = "You just swipe from left -> right"
+//    }
 }
+
