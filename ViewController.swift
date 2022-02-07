@@ -33,7 +33,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func tapOnLabel(_ sender: Any) {
-        lbTitle.text = "Screen 1: Tap gesture" 
+        lbTitle.text = "Screen 1: Tap gesture"
+        let vc = SwipeGestureVC(nibName: "SwipeGestureVC", bundle: nil)
+        present(vc, animated: true, completion: nil)
     }
 }
 
