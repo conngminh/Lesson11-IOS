@@ -47,6 +47,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="OWp-mm-tOj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CMj-eO-F2h"/>
                 <constraint firstItem="hmA-jZ-cYb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Ggg-Z5-S0v"/>
@@ -57,8 +58,16 @@
                 <constraint firstItem="OWp-mm-tOj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="n3N-da-I9J"/>
                 <constraint firstItem="hmA-jZ-cYb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sOB-cF-fzM"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="rOJ-KH-WlY" appends="YES" id="jNp-pw-nyO"/>
+            </connections>
             <point key="canvasLocation" x="132" y="100"/>
         </view>
+        <swipeGestureRecognizer direction="right" id="rOJ-KH-WlY">
+            <connections>
+                <action selector="swipeOnView:" destination="-1" id="FQ1-YY-9vO"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="barca" width="1200" height="1217"/>

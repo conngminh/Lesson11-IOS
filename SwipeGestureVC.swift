@@ -74,6 +74,7 @@ class SwipeGestureVC: UIViewController {
             lbTile.text = "You just swipe from up -> down"
         }
     }
+    
 //    @objc func swipeLeftLogo() {
 //        lbTile.text = "You just swipe from right -> left"
 //    }
@@ -81,5 +82,10 @@ class SwipeGestureVC: UIViewController {
 //    @objc func swipeRightLogo() {
 //        lbTile.text = "You just swipe from left -> right"
 //    }
+    
+    
+    @IBAction func swipeOnView(_ sender: Any) {
+        lbTile.text = "Swipe right on View"
+    }
 }
 
