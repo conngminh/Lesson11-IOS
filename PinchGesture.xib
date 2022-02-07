@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PinchGesture" customModule="Lesson11" customModuleProvider="target">
             <connections>
                 <outlet property="imgBall" destination="0gV-Dl-OJq" id="N04-2B-t47"/>
+                <outlet property="imgLogo" destination="Ttr-1r-471" id="kbh-Nt-DCA"/>
                 <outlet property="lbTitle" destination="7vp-Ve-iY4" id="pmb-t8-YNQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,6 +36,17 @@
                         <constraint firstAttribute="width" constant="100" id="nnv-q3-5w7"/>
                     </constraints>
                 </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barca" translatesAutoresizingMaskIntoConstraints="NO" id="Ttr-1r-471">
+                    <rect key="frame" x="157" y="248" width="100" height="100"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="6qp-1y-VKW"/>
+                        <constraint firstAttribute="height" constant="100" id="HfG-EG-xam"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dNq-YA-gQF" appends="YES" id="BDi-Yn-jLK"/>
+                    </connections>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,11 +56,19 @@
                 <constraint firstItem="7vp-Ve-iY4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Wgs-nE-7Cw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7vp-Ve-iY4" secondAttribute="trailing" constant="20" id="gL2-3J-3OE"/>
                 <constraint firstItem="7vp-Ve-iY4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lk2-DC-EsU"/>
+                <constraint firstItem="Ttr-1r-471" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mW7-9x-cwo"/>
+                <constraint firstItem="0gV-Dl-OJq" firstAttribute="top" secondItem="Ttr-1r-471" secondAttribute="bottom" constant="50" id="svo-hN-IQt"/>
             </constraints>
-            <point key="canvasLocation" x="-648" y="-7"/>
+            <point key="canvasLocation" x="-1481" y="-194"/>
         </view>
+        <pinchGestureRecognizer id="dNq-YA-gQF">
+            <connections>
+                <action selector="pinchOnLogo:" destination="-1" id="p7s-7m-1Af"/>
+            </connections>
+        </pinchGestureRecognizer>
     </objects>
     <resources>
+        <image name="barca" width="1200" height="1217"/>
         <image name="champions league" width="1200" height="675"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
