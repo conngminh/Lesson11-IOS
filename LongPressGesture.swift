@@ -37,6 +37,10 @@ class LongPressGesture: UIViewController {
     
     @IBAction func longPressOnLabel(_ sender: Any) {
         lbTitle.text = "You have long pressed on title"
+        let vc = PanGestureVC(nibName: "PanGestureVC", bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
     
 }
