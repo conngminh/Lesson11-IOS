@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwipeGestureVC" customModule="Lesson11" customModuleProvider="target">
             <connections>
+                <outlet property="heightTextFieldContr" destination="7v1-eN-VB2" id="2kF-zu-qZM"/>
                 <outlet property="imgLogo" destination="Ccx-Jp-miC" id="EVl-s5-vRR"/>
                 <outlet property="lbTile" destination="OWp-mm-tOj" id="2X6-X8-YKO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Gesture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWp-mm-tOj">
-                    <rect key="frame" x="20" y="64" width="374" height="30"/>
+                    <rect key="frame" x="20" y="244" width="374" height="30"/>
                     <gestureRecognizers/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <nil key="textColor"/>
@@ -35,15 +36,26 @@
                         <constraint firstAttribute="width" constant="240" id="jzt-PN-wEP"/>
                     </constraints>
                 </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search something..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmA-jZ-cYb">
+                    <rect key="frame" x="10" y="64" width="394" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="7v1-eN-VB2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="OWp-mm-tOj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CMj-eO-F2h"/>
+                <constraint firstItem="hmA-jZ-cYb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Ggg-Z5-S0v"/>
                 <constraint firstItem="Ccx-Jp-miC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Qh9-zI-zdd"/>
                 <constraint firstItem="Ccx-Jp-miC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TnT-zM-YnL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hmA-jZ-cYb" secondAttribute="trailing" constant="10" id="hgU-9j-hWY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OWp-mm-tOj" secondAttribute="trailing" constant="20" id="ju7-97-3GS"/>
-                <constraint firstItem="OWp-mm-tOj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="n3N-da-I9J"/>
+                <constraint firstItem="OWp-mm-tOj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="n3N-da-I9J"/>
+                <constraint firstItem="hmA-jZ-cYb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sOB-cF-fzM"/>
             </constraints>
             <point key="canvasLocation" x="132" y="100"/>
         </view>

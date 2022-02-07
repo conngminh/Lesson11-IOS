@@ -11,9 +11,13 @@ class SwipeGestureVC: UIViewController {
     @IBOutlet weak var lbTile: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
     
+    
+    @IBOutlet weak var heightTextFieldContr: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSwipeGesture()
+        heightTextFieldContr.constant = 0
     }
     
     func setupSwipeGesture() {
@@ -33,6 +37,29 @@ class SwipeGestureVC: UIViewController {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeLogo))
         swipeDown.direction = .down
         imgLogo.addGestureRecognizer(swipeDown)
+        
+        let swipeViewDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeView))
+        swipeViewDown.direction = .down
+        view.addGestureRecognizer(swipeViewDown)
+        
+        let swipeViewUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeView))
+        swipeViewUp.direction = .up
+        view.addGestureRecognizer(swipeViewUp)
+        
+    }
+    
+    @objc func swipeView(swipe: UISwipeGestureRecognizer) {
+        if swipe.direction == UISwipeGestureRecognizer.Direction.down {
+            UIView.animate(withDuration: 0.5) {
+                self.heightTextFieldContr.constant = 36
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.heightTextFieldContr.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }
         
     }
     

@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     @IBAction func tapOnLabel(_ sender: Any) {
         lbTitle.text = "Screen 1: Tap gesture"
         let vc = SwipeGestureVC(nibName: "SwipeGestureVC", bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
     }
 }
