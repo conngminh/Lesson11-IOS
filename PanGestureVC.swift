@@ -42,8 +42,11 @@ class PanGestureVC: UIViewController {
             let x = view.center.x + trans.x
             let y = view.center.y + trans.y
             view.center = CGPoint(x: x, y: y)
-            sender.setTranslation(CGPoint.zero, in: view)
         }
-
+        sender.setTranslation(CGPoint.zero, in: view)
+        let vc = PinchGesture(nibName: "PinchGesture", bundle: nil)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
