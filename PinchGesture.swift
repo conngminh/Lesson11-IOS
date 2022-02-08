@@ -37,6 +37,11 @@ class PinchGesture: UIViewController {
             let y = sender.scale
             view.transform = view.transform.scaledBy(x: x, y: y)
             sender.scale = 1
+            
+            let vc = RouteGestureVC(nibName: "RouteGestureVC", bundle: nil)
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true, completion: nil)
         }
+        
     }
 }
