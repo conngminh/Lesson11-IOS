@@ -10,6 +10,8 @@ import UIKit
 class RouteGestureVC: UIViewController {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
+    @IBOutlet weak var imgBall: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRouteGesture()
@@ -29,4 +31,13 @@ class RouteGestureVC: UIViewController {
             route.rotation = 0
         }
     }
+    
+    @IBAction func routeOnBall(_ sender: UIRotationGestureRecognizer) {
+        if let view = sender.view {
+            view.transform = view.transform.rotated(by: sender.rotation)
+            sender.rotation = 0
+        }
+    }
+    
+    
 }

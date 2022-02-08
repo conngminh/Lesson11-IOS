@@ -42,6 +42,12 @@ class PinchGesture: UIViewController {
             vc.modalPresentationStyle = .overFullScreen
             present(vc, animated: true, completion: nil)
         }
-        
     }
+    
+    @IBAction func tapOnButton(_ sender: Any) {
+        let vc = RouteGestureVC(nibName: "RouteGestureVC", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
 }

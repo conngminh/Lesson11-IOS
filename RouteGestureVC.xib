@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RouteGestureVC" customModule="Lesson11" customModuleProvider="target">
             <connections>
+                <outlet property="imgBall" destination="eMT-PQ-AWi" id="pdY-dr-1s6"/>
                 <outlet property="imgLogo" destination="F5r-sS-yHo" id="Os9-z5-pfa"/>
                 <outlet property="lbTitle" destination="RRW-d5-qPK" id="XQd-qz-JPv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,21 +36,40 @@
                         <constraint firstAttribute="height" constant="150" id="VB6-eI-pip"/>
                     </constraints>
                 </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="champions league" translatesAutoresizingMaskIntoConstraints="NO" id="eMT-PQ-AWi">
+                    <rect key="frame" x="132" y="193" width="150" height="150"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Et1-Th-Qhr"/>
+                        <constraint firstAttribute="height" constant="150" id="ZBe-EQ-483"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="hG7-KU-Xlj" appends="YES" id="lsZ-e1-cIB"/>
+                    </connections>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="RRW-d5-qPK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="76k-3d-x5Q"/>
                 <constraint firstItem="RRW-d5-qPK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Aq4-Dh-EuM"/>
+                <constraint firstItem="F5r-sS-yHo" firstAttribute="top" secondItem="eMT-PQ-AWi" secondAttribute="bottom" constant="30" id="E3c-Jp-h0p"/>
+                <constraint firstItem="eMT-PQ-AWi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OWt-XE-jkb"/>
                 <constraint firstItem="F5r-sS-yHo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TLj-iW-F5E"/>
                 <constraint firstItem="F5r-sS-yHo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jzo-fU-Q40"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RRW-d5-qPK" secondAttribute="trailing" constant="20" id="uLU-wn-Ouk"/>
             </constraints>
-            <point key="canvasLocation" x="-49" y="76"/>
+            <point key="canvasLocation" x="97" y="-78"/>
         </view>
+        <rotationGestureRecognizer id="hG7-KU-Xlj">
+            <connections>
+                <action selector="routeOnBall:" destination="-1" id="84T-fL-Lsm"/>
+            </connections>
+        </rotationGestureRecognizer>
     </objects>
     <resources>
         <image name="barca" width="1200" height="1217"/>
+        <image name="champions league" width="1200" height="675"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

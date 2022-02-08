@@ -47,6 +47,15 @@
                         <outletCollection property="gestureRecognizers" destination="dNq-YA-gQF" appends="YES" id="BDi-Yn-jLK"/>
                     </connections>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnA-i4-5Ht">
+                    <rect key="frame" x="174" y="633" width="67" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="tapOnButton:" destination="-1" eventType="touchUpInside" id="h5C-QU-3Vu"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +68,7 @@
                 <constraint firstItem="Ttr-1r-471" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mW7-9x-cwo"/>
                 <constraint firstItem="0gV-Dl-OJq" firstAttribute="top" secondItem="Ttr-1r-471" secondAttribute="bottom" constant="50" id="svo-hN-IQt"/>
             </constraints>
-            <point key="canvasLocation" x="-1481" y="-194"/>
+            <point key="canvasLocation" x="-1481.1594202898552" y="-194.19642857142856"/>
         </view>
         <pinchGestureRecognizer id="dNq-YA-gQF">
             <connections>
