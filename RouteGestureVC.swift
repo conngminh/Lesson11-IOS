@@ -39,5 +39,9 @@ class RouteGestureVC: UIViewController {
         }
     }
     
-    
+    @IBAction func tapOnButton(_ sender: Any) {
+        let vc = SideMenuVC(nibName: "SideMenuVC", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+    }
 }
